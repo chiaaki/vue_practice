@@ -10,6 +10,19 @@
     <h1>ToDo アプリ</h1>
     <div id="app">
         <div>
+            <p>{{ dateFormat }}</p>
+            <div>
+                <input type="checkbox" id="category-01" v-model="todoCategories" value="category-01">
+                <label for="category-01">category-01</label>
+            </div>
+            <div>
+                <input type="checkbox" id="category-02" v-model="todoCategories" value="category-02">
+                <label for="category-02">category-02</label>
+            </div>
+            <p>{{ categoryText }}</p>
+        </div>
+
+        <div>
             <input type="text" v-model.lazy="todoTitle" />
             <p>{{ todoTitle }}</p>
             <input type="text" v-model.number="todoTitle2" />
