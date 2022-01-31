@@ -1,6 +1,8 @@
 Vue.createApp({
     data: function() {
         return {
+            count: 0,
+
             todoTitle: '',
             todoTitle2: '',
             todoTitle3: '',
@@ -11,6 +13,11 @@ Vue.createApp({
             todoCategory: false,
             todoCategories: [],
         }
+    },
+    methods: {
+        onClickCountUp: function(event) {
+            this.count += 1
+        },
     },
     computed: {
         dateFormat: function() {
