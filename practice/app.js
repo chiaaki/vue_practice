@@ -16,6 +16,7 @@ Vue.createApp({
     },
     methods: {
         onClickCountUp: function(event) {
+            console.log(event)
             this.count += 1
         },
     },
