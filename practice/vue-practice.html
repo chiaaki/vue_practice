@@ -9,6 +9,15 @@
 <body>
     <h1>ToDo アプリ</h1>
     <div id="app">
+        <div class="p83">
+            <button type="button" @click="onClick">todos[1]のタイトルを変更</button>
+            <p>{{ todos }}</p>
+        </div>
+        <div>
+        <input type="text" v-model.trim="todoTitle04" />
+        <p>{{ todoTitle04 }}</p>
+        </div>
+
         <button type="button" v-on:click="onClickCountUp($event)">Count Up</button>
         <p>{{ count }}</p>
         <div>
