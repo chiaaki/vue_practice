@@ -9,7 +9,9 @@
 <body>
     <h1>ToDo アプリ</h1>
     <div id="app">
-        <div v-bind:class="{'is-active': isActive, 'is-inactive:!isActive'}"></div>
+        <div v-bind:style="{ color: defaultColor }"></div>
+
+        <div class="default-class" v-bind:class="className"></div>
     </div>
     <script src="app.js"></script>
 </body>
