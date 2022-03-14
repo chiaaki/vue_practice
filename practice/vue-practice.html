@@ -9,26 +9,11 @@
 <body>
     <h1>ToDo アプリ</h1>
     <div id="app">
-        <div class="p106" v-for="item2 in items2" :key="item2.id">
-            {{ item2.name }}
-        </div>
-
-        <div class="p105" v-for="(value, key, index) in object">
-            {{ index }}: [{{ key }}] {{ value }}
-        </div>
-        <div class="p104" v-for="value in object">{{ value }}</div>
-        <div class="p103" v-for="(item, index) in items">{{ index }}: {{ item }}</div>
-        <div class="p102" v-for="item in items">{{ item }}</div>
-
-        <div v-if="value >= 10">10以上</div>
-        <div v-else-if="value >= 5">5以上</div>
-        <div v-else>5未満</div>
-
-        <div class="p98" v-if="isShow"></div>
-        <div v-bind:style="{ color: defaultColor }"></div>
-
-        <div class="default-class" v-bind:class="className"></div>
+        <my-title :name="authorName"></my-title>
     </div>
+    <script type="text/x-template" id="title-template">
+        <p>{{ upperCaseName }}</p>
+    </script>
     <script src="app.js"></script>
 </body>
 </html>
