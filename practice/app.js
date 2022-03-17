@@ -1,29 +1,35 @@
-const myTitle = {
+const updateAuthor = {
+    template: '#update-author-template',
     props: {
         name: {
             type: String,
-            default: '',
-            validator: function(value) {
-                return value.length > 0
-            },
+            required: true,
+        },
+        age: {
+            type: Number,
             required: true,
         },
     },
-    computed: {
-        upperCaseName: function() {
-            return this.name.toUpperCase()
+    methods: {
+        onClickAge: function() {
+            this.$emit('update:age', this.age + 1)
+        },
+        onInput: function(event) {
+            this.$emit('update:name', $event.target.value)
         },
     },
-    template: '#title-template',
 }
 
 Vue.createApp({
     data: function() {
         return {
-            authorName: 'yamada',
+            author: {
+                name: 'Yamada',
+                age: 40,
+            },
         }
     },
     components: {
-        'my-title': myTitle,
+        'update-author': updateAuthor,
     },
 }).mount('#app')
